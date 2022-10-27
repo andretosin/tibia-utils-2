@@ -1,1 +1,1 @@
-worker: python3 tibia-utils-2.py
+worker: python tibia-utils-2.py
