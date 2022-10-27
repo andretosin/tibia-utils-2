@@ -1,0 +1,1 @@
+worker: python tibia-utils-2.py
