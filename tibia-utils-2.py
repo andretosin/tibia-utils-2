@@ -1,6 +1,7 @@
 from distutils.command.config import config
 import discord
-from discord.ext importgit ommands
+from decouple import config
+from discord.ext import commands
 
 intents = discord.Intents.all()
 
@@ -22,7 +23,7 @@ async def on_message(message):
         startIndex = log.find(keyword)
         auxSubstring = log[startIndex:]
         endSubstring = auxSubstring[auxSubstring.find('\n') + 1:]
-        return endSubstring
+        return endSubstrings
 
     def parseFirstKeyword(log, keyword):
         keyword = keyword + ': '
