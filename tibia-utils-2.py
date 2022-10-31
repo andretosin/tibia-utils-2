@@ -1,5 +1,6 @@
+from distutils.command.config import config
 import discord
-from discord.ext import commands
+from discord.ext import commands"
 
 intents = discord.Intents.all()
 
@@ -214,6 +215,6 @@ async def on_message(message):
             await message.channel.send('Comando não reconhecido.')
 
 
-
-bot.run("MTAzNDk5Mjk3NzA2NTU0NTgwOA.GqNdmT.blZvoLBBBVTVI8ul44zOidJ2IVO2uCTRpnJyqw")
+token = config("TOKEN")
+bot.run(token)
 
