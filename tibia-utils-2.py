@@ -219,5 +219,5 @@ async def on_message(message):
 
 token = os.getenv("TOKEN")
 print(token)
-bot.run("MTAzNDk5Mjk3NzA2NTU0NTgwOA.GEHUbu.26KCy5TsUsLuPx3JxTydbAkBPkKi3WXIQLlVjU")
+#bot.run(token)
 
