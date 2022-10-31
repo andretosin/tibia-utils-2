@@ -1,6 +1,6 @@
 from distutils.command.config import config
 import discord
-from discord.ext import commands"
+from discord.ext importgit ommands
 
 intents = discord.Intents.all()
 
