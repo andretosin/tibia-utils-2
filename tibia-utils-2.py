@@ -1,6 +1,6 @@
 from distutils.command.config import config
 import discord
-from decouple import config
+import os
 from discord.ext import commands
 
 intents = discord.Intents.all()
@@ -23,7 +23,7 @@ async def on_message(message):
         startIndex = log.find(keyword)
         auxSubstring = log[startIndex:]
         endSubstring = auxSubstring[auxSubstring.find('\n') + 1:]
-        return endSubstrings
+        return endSubstring
 
     def parseFirstKeyword(log, keyword):
         keyword = keyword + ': '
@@ -216,7 +216,8 @@ async def on_message(message):
             await message.channel.send('Comando não reconhecido.')
 
 
-token = config("TOKEN")
+
+token = os.getenv("TOKEN")
 print(token)
-#bot.run(token)
+bot.run("MTAzNDk5Mjk3NzA2NTU0NTgwOA.GEHUbu.26KCy5TsUsLuPx3JxTydbAkBPkKi3WXIQLlVjU")
 
