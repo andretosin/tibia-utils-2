@@ -217,5 +217,5 @@ async def on_message(message):
 
 token = config("TOKEN")
 print(token)
-bot.run(token)
+#bot.run(token)
 
