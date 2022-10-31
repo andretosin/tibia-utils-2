@@ -218,6 +218,5 @@ async def on_message(message):
 
 
 token = os.getenv("TOKEN")
-print(token)
-#bot.run(token)
+bot.run(token)
 
