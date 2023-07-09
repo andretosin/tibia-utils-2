@@ -2,6 +2,8 @@ from distutils.command.config import config
 import discord
 import os
 from discord.ext import commands
+from git import Repo
+import datetime
 
 intents = discord.Intents.all()
 
@@ -216,7 +218,14 @@ async def on_message(message):
             await message.channel.send('Comando não reconhecido.')
 
 
+repo_url = 'https://github.com/andretosin/tokens.git'
+dest_path = '/Users/user/Developer/Python/DiscordBot/tibia-utils-2/token'
+token_path = '/Users/user/Developer/Python/DiscordBot/tibia-utils-2/token/discord.txt'
 
-token = os.getenv("TOKEN")
+if not os.path.exists(dest_path):
+    repo = Repo.clone_from(repo_url, dest_path)
+
+with open(token_path, 'r') as file:
+    token = file.read().strip()
+    
 bot.run(token)
-
